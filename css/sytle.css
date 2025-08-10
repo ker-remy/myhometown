@@ -1,0 +1,29 @@
+:root {
+  color-scheme: light;
+}
+
+/* Make skip link visible when focused (enhanced in-page positioning) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 0;
+}
+
+/* Improve focus ring visibility for keyboard users (fallback beyond Tailwind) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #10b981; /* emerald-500 */
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Prevent long words from overflowing on small screens */
+body {
+  overflow-wrap: anywhere;
+}
